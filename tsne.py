@@ -258,10 +258,14 @@ def tsne(df, output_dir, name, perplexity):
     )
 
     plot = tsne_plot(df, name, perplexity)
+    # plot.update_layout(
+    #     paper_bgcolor='rgba(0,0,0,0)',
+    #     plot_bgcolor='rgba(0,0,0,0)'
+    # )
     plot.show()
 
-    # with open(os.path.join(output_dir, f"{name}_tnse-plot.html"), "w") as plot_file:
-    #     plot_file.write(to_html(plot, include_plotlyjs="cdn"))
+    with open(os.path.join(output_dir, f"{name}_tnse-plot.html"), "w") as plot_file:
+        plot_file.write(to_html(plot, include_plotlyjs="cdn"))
 
 
 def main():

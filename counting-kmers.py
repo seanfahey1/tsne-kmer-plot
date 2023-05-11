@@ -196,7 +196,7 @@ def main():
     print(os.getcwd())
     sys.stdout.flush()
 
-    with open("../contig_kmer_counts.p", "wb") as o:
+    with open("contig_kmer_counts.p", "wb") as o:
         p.dump(df, o)
 
     if args.plot:
